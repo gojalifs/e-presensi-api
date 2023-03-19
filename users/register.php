@@ -70,7 +70,7 @@
                 'message' => 'NIK atau Email sudah digunakan.',
                 'status' => false
             ));
-            exit();
+            
         }
         
         echo json_encode(array(

@@ -35,6 +35,7 @@
             $stmt = $conn->prepare("UPDATE password set password = ? WHERE nik = $nik");
             $stmt->bind_param('s', $new_hashed_password);
             $result = $stmt->execute();
+            $stmt->close();
 
             if ($result) {   
                 echo json_encode(array(
@@ -51,7 +52,7 @@
         }
     }
     
-
     // Menutup koneksi database
+    $oldpwdStmt->close();
     $conn->close();
 ?>
