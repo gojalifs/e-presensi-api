@@ -80,6 +80,31 @@
             exit();
         }
 
+        /// TODO add upload image
+        // // Tentukan direktori penyimpanan gambar
+        // $target_dir = "../picts/";
+        // if (!is_dir($target_dir . $nik . '/')) {
+        //     mkdir($target_dir . $nik . '/', 0777, true);
+        // }
+
+
+        // // Buat nama file unik untuk gambar dengan menambahkan timestamp di depan nama file
+        // $target_file = $target_dir . time() . '_' . basename($_FILES["img_path"]["name"]);
+
+        // // Simpan gambar ke direktori penyimpanan
+        // if (move_uploaded_file($_FILES["img_path"]["tmp_name"], $target_file)) {
+        //     // Jika berhasil, simpan path gambar ke variabel $img_path
+        //     $img_path = $target_file;
+        // } else {
+        //     // Jika gagal, tampilkan pesan error
+        //     echo json_encode(array(
+        //         'message' => 'Terjadi kesalahan saat mengunggah gambar.',
+        //         'status' => false
+        //     ));
+        //     exit();
+        // }
+
+
         // Memasukkan data presensi detail ke dalam tabel presensi_detail
         $query = "INSERT INTO presensi_detail (id_presensi, jenis, jam, longitude, latitude, img_path) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($query);
