@@ -1,7 +1,7 @@
 <?php
     // Mengambil koneksi database dari file config.php
-    require_once('connection.php');
-    require_once('validation/validation.php');
+    require_once('../connection.php');
+    require_once('../validation/validation.php');
 
     // Inisialisasi pesan error
     $errors = array();
